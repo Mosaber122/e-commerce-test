@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/***** start global style ******/
+:root{
+    --yellow:#ffbf00
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+}
+span{
+    color: var(--yellow);
+}
+del{
+    color: black;
+}
+
+/***** end global style ******/
+
+/***** start header ******/
+
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    background-color: white;
+}
+header .logo{
+    text-transform:uppercase;
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+header ul li a{
+    display: inline-block;
+    padding: 5px;
+    margin-left: 10px;
+    background-color: #ffbf00;
+    width: 100px;
+    text-align: center;
+    border-radius: 20px;
+    transition: all 0.5s;
+    
+}
+header ul li a:hover{
+    opacity: 0.5;
+    transform: translateY(-5px);
+}
+header ul li .cart{
+    position: relative;
+}
+header ul li .cart .incart{
+    position: absolute;
+    top: -5px;
+    right: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+/***** end header ******/
+
+/***** start home ******/
+
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top,rgb(255, 255, 255), rgba(0, 0, 0, 0)),
+    url(photo/cover10.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.home .text{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-100px);
+    margin-right: 30px;
+    
+}
+.home .text h3{
+    font-size: 25px;
+    text-transform: uppercase;
+    cursor: grab;
+}
+.home .text p{
+    text-transform: capitalize;
+    cursor: grab;
+}
+
+.home .text a{
+    display: block;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    background-color: #ffbf00;
+    font-weight: 600;
+    border: 2px solid black;
+    font-size: 25px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    text-align: center;
+    box-shadow: 10px 10px 20px black;
+}
+.home .text a:hover{
+    transform: translateY(-10px);
+}
+
+/***** end home ******/
+/***** start slide 1 ******/
+.slid1{
+    width: 100%;
+    background-image: url(photo/cover\ slid.jpg);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    
+}
+.slid1 .text {
+    width: 300px;
+    height: 200px;
+    background-color: var(--yellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px 5px;
+    border-radius: 10px;
+    flex-grow: 1;
+    
+}
+.slid1 .text i{
+    font-size: 30px;
+}
+.slid1 .text h3{
+text-transform: uppercase;
+}
+.slid1 .text p{
+    font-weight: 500;
+}
+
+/***** end slide 1 ******/
+
+/***** start slide 2 ******/
+.video{
+    position: relative;
+}
+.video video {
+    width: 100%;
+    
+    
+}
+.video::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.479);
+}
+.video .text{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.video .text h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--yellow);
+}
+.video .text a{
+    display: inline-block;
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--yellow);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 10px;
+    transition: all 0.5s;
+}
+.video .text a:hover{
+    transform: translateY(-10px);
+}
+
+
+
+/***** end slide 2 ******/
+
+
+/***** start product ******/
+.collection .title {
+    font-weight: 800;
+    font-size: 30px;
+    text-transform: capitalize;
+    margin: 10px;
+}
+.collection .container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.collection .container .card{
+    width: 260px;
+    background-color: rgba(128, 128, 128, 0.096);
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.644);
+}
+
+.collection .container .card img{
+    width: 100%;
+    height: 300px;
+    border-bottom: 1px solid black;
+    border-radius: 8px 8px 0px 0px;
+}
+.collection .container .card h2{
+    text-align: center;
+    text-transform: capitalize;
+    
+}
+.collection .container .card p{
+    padding: 5px 10px;
+    font-weight: 700;
+}
+.collection .container .card div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+.collection .container .card div p{
+    font-size: 20px;
+    font-weight: 700;
+    color: gold;
+}
+.collection .container .card div p:hover,
+.collection .container .card div button:hover{
+    transform: scale(1.2);
+}
+.collection .container .card div button{
+    height: 30px;
+    border-radius: 8px;
+    padding: 0px 5px;
+}
+
+
+/***** end product ******/
+/***** start accesories ******/
+
+.accesories{
+width: 100%;
+background-color: #ffbf00;
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+
+}
+.accesories .img {
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    
+}
+.accesories .img img{
+    width: 250px;
+    height: 300px;
+    border-radius: 40px;
+    margin: 10px;
+}
+.accesories .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    flex-grow: 1;
+    margin-top: 20px;
+}
+@media (max-width:1105px) {
+
+    .accesories .text{
+        order: 1;
+    }
+    .accesories .img{
+        order: 2;
+    }
+    .accesories .text h1,
+    .accesories .text a{
+        font-size: 20px;
+    }
+
+}
+.accesories .text h1{
+    font-weight: 800;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 20px;
+}
+.accesories .text h1::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border-top: 5px solid black;
+    border-left: 5px solid black;
+}
+.accesories .text h1::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+}
+.accesories .text a{
+    display: block;
+    width: 150px;
+    padding: 10px;
+    background-color:#ffbf00;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0px;
+    border: 2px solid black;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    box-shadow: 10px 10px 20px black;
+    color: black;
+}
+.accesories .text a:hover{
+    transform: translateY(-10px);
+}
+
+/***** end accesories ******/
+
+/***** start allproducts ******/
+
+.allproducts .title {
+    font-weight: 800;
+    font-size: 30px;
+    text-transform: capitalize;
+    margin: 10px;
+}
+.allproducts .container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.allproducts .container .cards{
+    width: 260px;
+    background-color: rgba(128, 128, 128, 0.096);
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.644);
+}
+
+.allproducts .container .cards img{
+    width: 100%;
+    height: 250px;
+    border-bottom: 1px solid black;
+    border-radius: 8px 8px 0px 0px;
+}
+.allproducts .container .cards h2{
+    text-align: center;
+    text-transform: capitalize;
+    
+}
+.allproducts .container .cards p{
+    padding: 5px 10px;
+    font-weight: 700;
+}
+.allproducts .container .cards div{
+    text-align: center;
+}
+.allproducts .container .cards div a{
+    display: inline-block;
+    color: black;
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: #ffbf00;
+    margin: 5px 0px;
+    width: 150px;
+    border-radius: 10px;
+    border: 2px solid black;
+    transition: all 0.5s;
+
+}
+.allproducts .container .cards div a:hover{
+    transform: scale(1.1);
+}
+
+/***** end allproducts ******/
+/*-------------contact us -------------*/
+.contactus{
+    overflow: hidden;
+    width: 100%;
+    background-color: #ffbf00;
+    
+  }
+  .contactus h1{
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 800;
+  }
+  .contactus .telephone{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .contactus .telephone i,
+  .contactus .telephone p,
+  .contactus .telephone a
+  {
+    font-weight: 800;
+    font-size: 20px;
+  
+  }
+  .contactus .telephone a{
+    transition: all 0.5s;
+    color: black;
+  }
+  .contactus .telephone a:hover{
+    transform: scale(1.5);
+
+  }
+  .contactus .telephone i,
+  .contactus .telephone p:hover
+  {
+    cursor:grabbing;
+  }
+  .contactus .telephone .mobile,
+  .contactus .telephone .phone,
+  .contactus .telephone .email
+  {
+    width: 300px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerus{
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerus .contuct form{
+    width: 300px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.363);
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .containerus .contuct h3{
+    font-weight: 800;
+    font-size: 25px;
+    text-shadow: 10px 10px 20px white;
+  
+  }
+  
+  .containerus .contuct form input{
+    width: 90%;
+    height: 40px;
+    color: black;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 800;
+  }
+  .containerus .contuct form p{
+    font-weight: 800;
+    margin-left: 15px;
+    
+  }
+  .containerus .contuct form textarea{
+    width: 90%;
+    height: 100px;
+    color: black;
+    padding-left: 10px;
+    font-weight: 800;
+  } 
+  .containerus .contuct form input[type="submit"]{
+    font-size: 25px;
+    font-weight: 800;
+    border: 2px solid black;
+    cursor: pointer;
+  }
+
+  /******************/
+
+  footer{
+    text-align: center;
+    font-weight: 800;
+  }
